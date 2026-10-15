@@ -212,3 +212,65 @@ footer{
 .footer ul a:hover{
     color: white;
 }
+
+/* Phones: the desktop grid has no floor for these hotlinked images, so three
+   350px-wide cards force the whole page sideways. Nothing above 640px changes. */
+@media (max-width: 640px){
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin: 26px 0 14px;
+        padding: 0 16px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .75rem;
+        padding-left: 0;
+        margin: 0;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px 16px;
+        margin: 0;
+    }
+    .card img:hover,
+    .card2 img:hover{
+        transform: none;
+    }
+    .text{
+        font-size: 22px;
+        margin: 16px 12px;
+    }
+    .text p{
+        font-size: 17px;
+    }
+    .text2{
+        font-size: 18px;
+        margin: 28px 16px;
+    }
+    .btnn{
+        flex-wrap: wrap;
+        margin: 24px 16px;
+    }
+    .btnflex{
+        flex-wrap: wrap;
+    }
+    .btn3,
+    .btn33{
+        width: 100%;
+        max-width: 320px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 20px 16px;
+    }
+}
